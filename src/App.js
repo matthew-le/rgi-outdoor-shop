@@ -1,10 +1,12 @@
+import React from "react";
+import MainHeader from "./components/MainHeader/MainHeader";
 
 
 function App() {
   return (
-    <div>
-      <h1>RGI Outdoors</h1> 
-    </div>
+    <React.Fragment>
+      <MainHeader/>
+    </React.Fragment>
   );
 }
 
