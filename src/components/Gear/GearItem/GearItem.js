@@ -1,4 +1,5 @@
 import classes from './GearItem.module.css';
+import GearItemForm from './GearItemForm';
 
 const GearItem = props => {
     const price=`$${props.price.toFixed(2)}`;
@@ -10,7 +11,7 @@ const GearItem = props => {
             <div className={classes.price}>{price}</div>
         </div>
         <div>
-
+            <GearItemForm />
         </div>
     </li>
 };
