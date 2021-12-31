@@ -1,4 +1,6 @@
 import classes from './AvailableGear.module.css';
+import Card from '../UI/Card';
+import GearItem from './GearItem/GearItem';
 
 const DUMMY_GEAR = [
     {
@@ -28,11 +30,11 @@ const DUMMY_GEAR = [
   ];
 
 const AvailableGear = () => {
-    const gearList = DUMMY_GEAR.map(gear => <li> {gear.name}</li>);
+    const gearList = DUMMY_GEAR.map(gear => <GearItem key={gear.id} name={gear.name} description={gear.description} price={gear.price}/> );
     return <section className={classes.gear}>
-        <ul>
+        <Card>
             {gearList}
-        </ul>
+        </Card>
     </section>
 };
 
