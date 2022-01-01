@@ -11,7 +11,7 @@ const GearItem = props => {
             <div className={classes.price}>{price}</div>
         </div>
         <div>
-            <GearItemForm />
+            <GearItemForm id={props.id}/>
         </div>
     </li>
 };

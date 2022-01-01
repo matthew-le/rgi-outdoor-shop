@@ -1,10 +1,10 @@
 import classes from './GearItemForm.module.css';
 import Input from '../../UI/Input';
 
-const GearItemForm = () => {
+const GearItemForm = (props) => {
     return <form className={classes.form}>
         <Input label='Amount' input={{
-            id: 'amount',
+            id: 'amount' + props.id,
             type: 'number',
             min: '1',
             max: '5',

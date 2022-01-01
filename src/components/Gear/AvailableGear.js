@@ -30,7 +30,7 @@ const DUMMY_GEAR = [
   ];
 
 const AvailableGear = () => {
-    const gearList = DUMMY_GEAR.map(gear => <GearItem key={gear.id} name={gear.name} description={gear.description} price={gear.price}/> );
+    const gearList = DUMMY_GEAR.map(gear => <GearItem id={gear.id} key={gear.id} name={gear.name} description={gear.description} price={gear.price}/> );
     return <section className={classes.gear}>
         <Card>
             {gearList}
