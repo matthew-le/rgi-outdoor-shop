@@ -1,8 +1,23 @@
+import { useContext } from 'react';
+
 import classes from './GearItem.module.css';
 import GearItemForm from './GearItemForm';
+import CartContext from '../../../store/cart-context';
+import Cart from '../../Cart/Cart';
+
 
 const GearItem = props => {
+    const cartCtx = useContext(CartContext);
     const price=`$${props.price.toFixed(2)}`;
+
+    const addToCartHandler = amount => {
+        cartCtx.addItem({
+            id: props.id,
+            name: props.name,
+            amount: amount,
+            price: props.price
+        });
+    };
 
     return <li className={classes.gear}>
         <div>
@@ -11,7 +26,7 @@ const GearItem = props => {
             <div className={classes.price}>{price}</div>
         </div>
         <div>
-            <GearItemForm id={props.id}/>
+            <GearItemForm id={props.id} onAddToCart={addToCartHandler}/>
         </div>
     </li>
 };
