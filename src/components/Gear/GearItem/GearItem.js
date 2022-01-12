@@ -3,8 +3,6 @@ import { useContext } from 'react';
 import classes from './GearItem.module.css';
 import GearItemForm from './GearItemForm';
 import CartContext from '../../../store/cart-context';
-import Cart from '../../Cart/Cart';
-
 
 const GearItem = props => {
     const cartCtx = useContext(CartContext);
